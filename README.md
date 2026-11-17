@@ -1,0 +1,18 @@
+# Hello-GitHub-Actions
+name: Hello Actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print message
+        run: echo "Hello DevOps"
